@@ -14,7 +14,7 @@ defmodule PluralsightTweet.Mixfile do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger, :quantum, :extwitter],
+      extra_applications: [:logger, :quantum, :extwitter, :mock, :mix_test_watch],
       mod: {PluralsightTweet.Application, []}
     ]
   end
@@ -27,7 +27,9 @@ defmodule PluralsightTweet.Mixfile do
       {:credo, "~> 0.8.10"},
       {:quantum, "~> 1.8"},
       {:extwitter, "~> 0.7.2"},
-      {:oauth, github: "tim/erlang-oauth"}
+      {:oauth, github: "tim/erlang-oauth"},
+      {:mock, "~> 0.3.1"},
+      {:mix_test_watch, "~> 0.5.0"}
     ]
   end
 end

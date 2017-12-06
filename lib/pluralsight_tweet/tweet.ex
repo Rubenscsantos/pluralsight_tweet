@@ -8,7 +8,7 @@ defmodule PluralsightTweet.Tweet do
     ExTwitter.update(str)
   end
   def send_random(file) do
-      PluralsightTweet.FileReader.get_string_to_tweet(file)
+      PluralsightTweet.FileReader.get_strings_to_tweet(file)
       |> send
   end
 end
